@@ -36,21 +36,21 @@ export function ScrollShowcase() {
     }
   }, [updateProgress])
 
-  // Crossfade: problem holds, fades out around midpoint; solution fades in
-  const problemOpacity = useTransform(scrollProgress, [0.35, 0.50], [1, 0])
-  const solutionOpacity = useTransform(scrollProgress, [0.50, 0.65], [0, 1])
+  // Crossfade: problem holds fully, fades out around midpoint; solution fades in
+  const problemOpacity = useTransform(scrollProgress, [0.40, 0.50], [1, 0])
+  const solutionOpacity = useTransform(scrollProgress, [0.50, 0.60], [0, 1])
 
   // Background color transitions cream → sage
-  const bgColor = useTransform(scrollProgress, [0.30, 0.70], ['#FAFAFA', '#F0EDFF'])
+  const bgColor = useTransform(scrollProgress, [0.35, 0.65], ['#FAFAFA', '#F0EDFF'])
 
   // Waveform bridge: appears during the crossover gap
-  const waveOpacity = useTransform(scrollProgress, [0.40, 0.48, 0.52, 0.60], [0, 1, 1, 0])
+  const waveOpacity = useTransform(scrollProgress, [0.42, 0.48, 0.52, 0.58], [0, 1, 1, 0])
   // Waveform sweeps from left to right during transition
-  const waveSweep = useTransform(scrollProgress, [0.40, 0.60], ['0%', '100%'])
+  const waveSweep = useTransform(scrollProgress, [0.42, 0.58], ['0%', '100%'])
 
   // Label crossfade -- problem label and solution label swap crisply
-  const problemLabelOpacity = useTransform(scrollProgress, [0.44, 0.50], [1, 0])
-  const solutionLabelOpacity = useTransform(scrollProgress, [0.50, 0.56], [0, 1])
+  const problemLabelOpacity = useTransform(scrollProgress, [0.46, 0.50], [1, 0])
+  const solutionLabelOpacity = useTransform(scrollProgress, [0.50, 0.54], [0, 1])
 
   // Mobile: stacked panels with fade
   if (!isLargeScreen) {
@@ -116,9 +116,9 @@ export function ScrollShowcase() {
     )
   }
 
-  // Desktop: crossfade with waveform bridge (200vh for snappy scroll)
+  // Desktop: crossfade with waveform bridge (300vh for gradual scroll)
   return (
-    <div ref={containerRef} className="relative" style={{ height: '200vh' }}>
+    <div ref={containerRef} className="relative" style={{ height: '300vh' }}>
       <motion.div
         className="sticky top-0 h-screen flex items-center justify-center overflow-hidden"
         style={{ backgroundColor: bgColor }}

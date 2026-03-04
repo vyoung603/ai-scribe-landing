@@ -131,8 +131,8 @@ export function Hero({ onOpenModal }: HeroProps) {
               className="relative rounded-3xl overflow-hidden shadow-[0_30px_80px_-20px_rgba(87,84,255,0.25)] ring-1 ring-white/20"
             >
               <video
-                src="/hero-therapist.mp4"
-                poster="/hero-therapist.png"
+                src={`${import.meta.env.BASE_URL}hero-therapist.mp4`}
+                poster={`${import.meta.env.BASE_URL}hero-therapist.png`}
                 autoPlay
                 muted
                 loop
@@ -153,8 +153,8 @@ export function Hero({ onOpenModal }: HeroProps) {
         >
           <div className="relative h-64 sm:h-80 overflow-hidden">
             <video
-              src="/hero-therapist.mp4"
-              poster="/hero-therapist.png"
+              src={`${import.meta.env.BASE_URL}hero-therapist.mp4`}
+              poster={`${import.meta.env.BASE_URL}hero-therapist.png`}
               autoPlay
               muted
               loop
