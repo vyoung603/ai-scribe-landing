@@ -124,19 +124,19 @@ export function ScrollShowcase() {
         style={{ backgroundColor: bgColor }}
       >
         <div className="section-container">
-          <div className="relative max-w-5xl mx-auto h-[70vh] flex items-center">
+          <div className="relative max-w-5xl mx-auto h-[70vh]">
 
-            {/* Section label -- pinned position, crisp swap */}
-            <div className="absolute top-[2%] left-0 right-0 flex justify-center">
-              <div className="relative h-6">
+            {/* Section label -- pinned at top, crisp swap */}
+            <div className="absolute top-6 left-0 right-0 flex justify-center z-20">
+              <div className="relative h-5">
                 <motion.p
-                  className="absolute inset-0 text-sm font-semibold text-forest/40 uppercase tracking-[0.2em] text-center"
+                  className="absolute inset-0 text-sm font-semibold text-forest/40 uppercase tracking-[0.2em] text-center whitespace-nowrap"
                   style={{ opacity: problemLabelOpacity }}
                 >
                   The problem
                 </motion.p>
                 <motion.p
-                  className="absolute inset-0 text-sm font-semibold text-forest/40 uppercase tracking-[0.2em] text-center"
+                  className="absolute inset-0 text-sm font-semibold text-forest/40 uppercase tracking-[0.2em] text-center whitespace-nowrap"
                   style={{ opacity: solutionLabelOpacity }}
                 >
                   The solution
@@ -146,11 +146,9 @@ export function ScrollShowcase() {
 
             {/* Problem panel -- fades out in place */}
             <motion.div
-              className="absolute inset-0 flex flex-col items-center justify-center"
+              className="absolute inset-0 flex flex-col items-center justify-start pt-20"
               style={{ opacity: problemOpacity }}
             >
-              {/* Spacer for label */}
-              <div className="h-16" />
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-forest text-center leading-tight mb-6">
                 Documentation takes as long
                 <br />
@@ -201,11 +199,9 @@ export function ScrollShowcase() {
 
             {/* Solution panel -- fades in, in place */}
             <motion.div
-              className="absolute inset-0 flex flex-col items-center justify-center"
+              className="absolute inset-0 flex flex-col items-center justify-start pt-20"
               style={{ opacity: solutionOpacity }}
             >
-              {/* Spacer for label */}
-              <div className="h-16" />
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-forest text-center leading-tight mb-6">
                 Your note is ready
                 <br />
