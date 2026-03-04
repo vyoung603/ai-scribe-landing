@@ -18,7 +18,7 @@ export function MissionMoment() {
         >
           <p className="text-sm font-semibold text-forest/40 uppercase tracking-[0.25em] mb-8">Our Mission</p>
 
-          <div className="border-l-2 border-forest/20 pl-8">
+          <div className="border-l-[3px] border-forest/30 pl-8">
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-[3.2rem] text-forest leading-snug mb-8">
               Documentation is the tax therapists pay for doing their job. We're eliminating it.
             </h2>

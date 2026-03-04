@@ -46,7 +46,7 @@ export function Security() {
           variants={fadeInUp}
           className="text-center mb-10"
         >
-          <p className="text-sm font-semibold text-sage/25 uppercase tracking-[0.25em] mb-5">Security</p>
+          <p className="text-sm font-semibold text-sage/40 uppercase tracking-[0.25em] mb-5">Security</p>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-[3.2rem] text-white leading-tight">
             Built for healthcare<br className="hidden sm:block" /> from day one
           </h2>

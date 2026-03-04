@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer, staggerItem } from '../lib/animations'
 
 const proofStats = [
-  { value: '90 min', label: 'saved daily' },
-  { value: '99%', label: 'consent rate' },
-  { value: '20+', label: 'clients weekly' },
+  { value: '6,000+', label: 'therapists on SonderMind' },
+  { value: '3 yrs', label: 'clinical AI R&D' },
+  { value: '10M+', label: 'sessions informed' },
 ]
 
 export function Testimonial() {
@@ -26,7 +26,7 @@ export function Testimonial() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.p
             variants={fadeInUp}
-            className="text-sm font-semibold text-white/25 uppercase tracking-[0.25em] mb-8"
+            className="text-sm font-semibold text-white/40 uppercase tracking-[0.25em] mb-8"
           >
             From the field
           </motion.p>

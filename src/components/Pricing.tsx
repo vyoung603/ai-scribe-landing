@@ -7,8 +7,8 @@ const tiers = [
   {
     name: 'Basic',
     tagline: 'For clinicians curious about how AI Scribe can save them time',
-    monthlyPrice: '$0',
-    annualPrice: '$0',
+    monthlyPrice: 'Free',
+    annualPrice: 'Free',
     features: [
       '20 sessions per month',
       'AI-powered clinical notes',
@@ -101,7 +101,7 @@ export function Pricing({ onOpenModal }: PricingProps) {
               {tier.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="text-xs font-bold bg-warm-accent text-white px-4 py-1.5 rounded-full shadow-lg shadow-warm-accent/30">
-                    Most Popular
+                    Recommended
                   </span>
                 </div>
               )}
@@ -109,7 +109,7 @@ export function Pricing({ onOpenModal }: PricingProps) {
               <h3 className={`text-xl font-semibold mb-2 ${tier.featured ? 'text-white' : 'text-forest'}`}>
                 {tier.name}
               </h3>
-              <p className={`text-base mb-8 min-h-[3rem] ${tier.featured ? 'text-sage/50' : 'text-ink-muted'}`}>
+              <p className={`text-base mb-8 min-h-[3rem] ${tier.featured ? 'text-white/60' : 'text-ink-muted'}`}>
                 {tier.tagline}
               </p>
 
@@ -118,11 +118,11 @@ export function Pricing({ onOpenModal }: PricingProps) {
                   <span className={`font-serif text-6xl ${tier.featured ? 'text-white' : 'text-forest'}`}>
                     {annual ? tier.annualPrice : tier.monthlyPrice}
                   </span>
-                  <span className={`text-sm ml-1 ${tier.featured ? 'text-sage/40' : 'text-ink-light'}`}>
+                  <span className={`text-sm ml-1 ${tier.featured ? 'text-white/50' : 'text-ink-light'}`}>
                     /month
                   </span>
                   {annual && tier.annualTotal && (
-                    <div className={`text-xs mt-1 ${tier.featured ? 'text-sage/40' : 'text-ink-light'}`}>
+                    <div className={`text-xs mt-1 ${tier.featured ? 'text-white/50' : 'text-ink-light'}`}>
                       Billed annually ({tier.annualTotal})
                     </div>
                   )}
@@ -146,10 +146,10 @@ export function Pricing({ onOpenModal }: PricingProps) {
                   <li key={feature} className="flex items-start gap-3">
                     <Check
                       size={18}
-                      className={`mt-0.5 flex-shrink-0 ${tier.featured ? 'text-sage/50' : 'text-forest/40'}`}
+                      className={`mt-0.5 flex-shrink-0 ${tier.featured ? 'text-white/50' : 'text-forest/40'}`}
                       strokeWidth={2.5}
                     />
-                    <span className={`text-[15px] ${tier.featured ? 'text-sage/70' : 'text-ink-light'}`}>
+                    <span className={`text-[15px] ${tier.featured ? 'text-white/80' : 'text-ink-light'}`}>
                       {feature}
                     </span>
                   </li>

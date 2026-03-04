@@ -25,7 +25,7 @@ export function BottomCTA({ onOpenModal }: BottomCTAProps) {
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[3rem] text-white leading-tight mb-5">
               Stop taking notes<br className="hidden sm:block" /> home tonight.
             </h2>
-            <p className="text-lg text-sage/50 mb-10 max-w-xl mx-auto leading-relaxed">
+            <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto leading-relaxed">
               Join the waitlist for early access and free onboarding when we launch.
             </p>
             <button
@@ -35,7 +35,7 @@ export function BottomCTA({ onOpenModal }: BottomCTAProps) {
               Join the Waitlist
               <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-            <p className="text-xs text-white/35 mt-5">Early access spots are limited. No credit card required.</p>
+            <p className="text-xs text-white/50 mt-5">Early access spots are limited. No credit card required.</p>
           </div>
         </motion.div>
       </div>

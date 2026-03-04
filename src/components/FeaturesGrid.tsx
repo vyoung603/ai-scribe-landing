@@ -69,7 +69,7 @@ const gridPlacement: Record<string, string> = {
 export function FeaturesGrid() {
   return (
     <section id="features" className="relative py-16 lg:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-cream via-sage/10 to-cream" />
+      <div className="absolute inset-0 bg-cream" />
 
       <div className="relative z-10 section-container">
         <motion.div
