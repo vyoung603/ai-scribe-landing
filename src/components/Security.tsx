@@ -65,13 +65,13 @@ export function Security() {
               <motion.div
                 key={item.title}
                 variants={staggerItem}
-                className="p-8 lg:p-10 rounded-3xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.1] backdrop-blur-sm transition-all duration-500 ease-out"
+                className="p-8 lg:p-10 rounded-3xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.1] hover:-translate-y-1 backdrop-blur-sm transition-all duration-300 ease-out"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-forest/30 to-forest-light/10 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-white/[0.08]">
                   <Icon size={26} className="text-sage/60" strokeWidth={1.7} />
                 </div>
                 <h3 className="font-semibold text-white text-lg mb-2">{item.title}</h3>
-                <p className="text-base text-white/55 leading-relaxed">{item.description}</p>
+                <p className="text-base text-white/70 leading-relaxed">{item.description}</p>
               </motion.div>
             )
           })}

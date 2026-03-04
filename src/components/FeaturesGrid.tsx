@@ -11,6 +11,15 @@ import {
 
 const templatePills = ['SOAP', 'Progress', 'Intake', 'Discharge', 'DAP', 'Treatment Plan', 'Psychotherapy']
 
+const iconAccents = [
+  'from-forest/10 to-forest-light/5',
+  'from-warm/80 to-warm-accent/10',
+  'from-sage/60 to-sage/30',
+  'from-forest/10 to-forest-light/5',
+  'from-warm/80 to-warm-accent/10',
+  'from-sage/60 to-sage/30',
+]
+
 const features = [
   {
     icon: FileText,
@@ -59,9 +68,8 @@ const gridPlacement: Record<string, string> = {
 
 export function FeaturesGrid() {
   return (
-    <section id="features" className="relative py-20 lg:py-28 overflow-hidden">
-      {/* Visible cream-warm gradient to separate from HowItWorks above and Pricing below */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cream-warm via-warm to-cream" />
+    <section id="features" className="relative py-16 lg:py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-cream via-sage/10 to-cream" />
 
       <div className="relative z-10 section-container">
         <motion.div
@@ -69,8 +77,9 @@ export function FeaturesGrid() {
           whileInView="visible"
           viewport={{ once: true, margin: '-40px' }}
           variants={fadeInUp}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
+          <p className="text-sm font-semibold text-forest/40 uppercase tracking-[0.25em] mb-5">Features</p>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-[3.2rem] text-forest leading-tight mb-4">
             Everything you need to<br className="hidden sm:block" /> document faster
           </h2>
@@ -86,16 +95,16 @@ export function FeaturesGrid() {
           variants={staggerContainer}
           className="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto auto-rows-[minmax(140px,auto)]"
         >
-          {features.map((feature) => {
+          {features.map((feature, i) => {
             const Icon = feature.icon
             const isLarge = feature.size === 'large'
             return (
               <motion.div
                 key={feature.title}
                 variants={staggerItem}
-                className={`group rounded-3xl ${isLarge ? 'p-10' : 'p-7'} bg-white border border-sage-dark/10 shadow-md hover:shadow-[0_16px_48px_-12px_rgba(87,84,255,0.15)] hover:-translate-y-1.5 transition-all duration-500 ease-out flex flex-col ${gridPlacement[feature.size]}`}
+                className={`group rounded-3xl ${isLarge ? 'p-10' : 'p-7'} bg-white border border-sage-dark/10 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col ${gridPlacement[feature.size]} ${isLarge ? 'bg-gradient-to-br from-white to-sage/20' : ''}`}
               >
-                <div className={`${isLarge ? 'w-14 h-14 rounded-2xl' : 'w-12 h-12 rounded-xl'} bg-gradient-to-br from-sage/60 to-sage/30 flex items-center justify-center mb-5 group-hover:from-sage group-hover:to-sage/60 transition-all duration-300`}>
+                <div className={`${isLarge ? 'w-14 h-14 rounded-2xl' : 'w-12 h-12 rounded-xl'} bg-gradient-to-br ${iconAccents[i]} flex items-center justify-center mb-5 transition-all duration-300`}>
                   <Icon size={isLarge ? 26 : 22} className="text-forest" strokeWidth={1.7} />
                 </div>
                 <h3 className={`font-semibold ${isLarge ? 'text-xl mb-3' : 'text-base mb-2'} text-forest`}>{feature.title}</h3>

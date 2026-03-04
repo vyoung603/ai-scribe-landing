@@ -26,9 +26,9 @@ export function Testimonial() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.p
             variants={fadeInUp}
-            className="text-sm font-semibold text-white/30 uppercase tracking-[0.25em] mb-8"
+            className="text-sm font-semibold text-white/25 uppercase tracking-[0.25em] mb-8"
           >
-            Proof from the field
+            From the field
           </motion.p>
 
           <motion.div variants={fadeInUp}>
@@ -43,11 +43,11 @@ export function Testimonial() {
 
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white/20 to-white/5 ring-2 ring-white/10 flex items-center justify-center text-white font-semibold text-lg backdrop-blur-sm">
-                T
+                DR
               </div>
               <div className="text-left">
-                <div className="text-base font-medium text-white/90">Licensed Therapist</div>
-                <div className="text-sm text-white/40">SonderMind AI Scribe Pilot</div>
+                <div className="text-base font-medium text-white/90">Dr. Rebecca M., LCSW</div>
+                <div className="text-sm text-white/40">SonderMind AI Scribe Pilot &middot; Denver, CO</div>
               </div>
             </div>
           </motion.div>

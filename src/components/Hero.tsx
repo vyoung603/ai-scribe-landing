@@ -102,7 +102,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-start gap-4">
               <button
                 onClick={onOpenModal}
-                className="group relative inline-flex items-center gap-4 px-10 py-5 bg-forest text-white text-lg font-semibold rounded-2xl hover:bg-forest-light transition-all duration-300 hover:shadow-[0_20px_60px_-15px_rgba(87,84,255,0.4)] hover:-translate-y-0.5"
+                className="group relative inline-flex items-center gap-4 px-10 py-5 bg-warm-accent text-white text-lg font-semibold rounded-2xl hover:bg-[#FF9F5C] transition-all duration-300 hover:shadow-[0_20px_60px_-15px_rgba(255,140,66,0.4)] hover:-translate-y-0.5 active:scale-[0.98]"
               >
                 Join the Waitlist
                 <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />

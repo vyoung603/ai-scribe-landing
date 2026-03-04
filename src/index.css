@@ -14,7 +14,8 @@
   --color-warm: #FFF8F0;
   --color-warm-accent: #FF8C42;
   --font-sans: 'Open Sans', system-ui, sans-serif;
-  --font-serif: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 @layer base {

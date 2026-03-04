@@ -133,8 +133,8 @@ export function Pricing({ onOpenModal }: PricingProps) {
                 onClick={onOpenModal}
                 className={`group w-full flex items-center justify-center gap-2 py-4 px-8 rounded-2xl font-semibold text-base transition-all duration-300 mb-8 ${
                   tier.featured
-                    ? 'bg-white text-forest hover:bg-sage hover:shadow-lg'
-                    : 'bg-forest text-white hover:bg-forest-light hover:shadow-lg hover:shadow-forest/20'
+                    ? 'bg-white text-forest hover:bg-sage hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]'
+                    : 'bg-warm-accent text-white hover:bg-[#FF9F5C] hover:shadow-lg hover:shadow-warm-accent/20 hover:-translate-y-0.5 active:scale-[0.98]'
                 }`}
               >
                 {tier.cta}

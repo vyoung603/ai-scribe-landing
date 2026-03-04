@@ -55,7 +55,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             ))}
             <button
               onClick={onOpenModal}
-              className="group inline-flex items-center gap-2 px-5 py-2.5 bg-forest text-white text-[13px] font-semibold rounded-full hover:bg-forest-light transition-all duration-300"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 bg-forest text-white text-[13px] font-semibold rounded-full hover:bg-forest-light hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98]"
             >
               Join Waitlist
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
